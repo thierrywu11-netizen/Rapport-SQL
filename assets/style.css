@@ -1,0 +1,42 @@
+:root { /* créé des couleurs */
+
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 0;
+    padding: 20px 20px 30px 20px ;
+    background-color: aqua;
+}
+
+ul {
+    padding: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    background-color: blue;
+    margin: 0;
+}
+
+li {
+    padding: 0 30px;
+    border: 2px solid navy;
+    border-radius: 5px;
+    background-color: aqua;
+    align-items: center;
+}
+
+li:hover {
+    background-color: yellow;
+}
+
+body {
+    margin: 0;
+    background-color: blueviolet;
+}
+
+.dedans {
+    font-size: 2rem;
+}

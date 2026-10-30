@@ -1,7 +1,7 @@
 :root {
-    --color-page: blueviolet;
-    --color-header: black;
-    --color-header-bg: aqua;
+    --color-page: black;
+    --color-header-text: white;
+    --color-header-bg: var(--color-page);
     --color-nav-text: black;
     --color-nav-bg: blue;
     --color-li-bg: aqua;
@@ -21,6 +21,7 @@ body {
 
 header {
     background-color: var(--color-header-bg);
+    color: var(--color-header-text);
     font-size: 4rem;
     font-weight: bold;
     text-align: center;

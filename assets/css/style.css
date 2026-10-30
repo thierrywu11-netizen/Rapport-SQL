@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Redaction:ital,wght@0,400;0,700;1,400&display=swap');
+
 :root {
     --color-page: black;
     --color-header-text: white;
@@ -12,14 +14,30 @@
 }
 
 * {
+    font-family: "Redaction", serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
 
+/*Font*/
+.redaction-regular {
+    font-family: "Redaction", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.redaction-bold {
+    font-family: "Redaction", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 5fr 1fr;
     grid-template-areas: "header nav"
                          "main main"
                          "footer footer";
@@ -27,30 +45,39 @@ body {
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--color-header-bg);
     color: var(--color-header-text);
     font-size: 3rem;
     font-weight: bold;
-    text-align: center;
     padding: 1rem;
 }
 
 nav {
     grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aquamarine;
 }
 
 nav ul {
     display: flex;
-    justify-content: center;
-    background-color: var(--color-nav-bg);
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--color-page);
     list-style: none;
+    width: 100%;
+    height: 100%;
 }
 
 nav ul li {
     width: 10rem;
     height: 2.5rem;
-    background-color: var(--color-li-bg);
-    border: 2px solid var(--color-li-border);
+    background-color: var(--color-page);
+    border: 2px solid gray;
     border-radius: 5px;
 }
 
@@ -65,14 +92,14 @@ nav ul li {
 }
 
 #homepage:hover, #rapport:hover, #contact:hover {
-    background-color: var(--color-li-hover);
+    background-color: orange;
 }
 
 #homepage a, #rapport a, #contact a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--color-link-text);
+    color: white;
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -83,6 +110,7 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
     font-size: 2rem;
     font-weight: bold;
 }
@@ -95,4 +123,5 @@ main {
 footer {
     grid-area: footer;
     background-color: pink;
+    text-align: center;
 }

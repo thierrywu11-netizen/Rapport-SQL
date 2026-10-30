@@ -13,27 +13,37 @@
 
 * {
     margin: 0;
+    padding: 0;
 }
 
 body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas: "header nav"
+                         "main main"
+                         "footer footer";
     background-color: var(--color-page);
 }
 
-header {
+.header {
     background-color: var(--color-header-bg);
     color: var(--color-header-text);
-    font-size: 4rem;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
+}
+
+nav {
+    grid-area: nav;
 }
 
 nav ul {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     background-color: var(--color-nav-bg);
-    list-style-type: none;
-    padding: 50px;
+    list-style: none;
 }
 
 nav ul li {
@@ -44,11 +54,21 @@ nav ul li {
     border-radius: 5px;
 }
 
-nav ul li:hover {
+#homepage {
+    grid-area: homepage;
+}
+#rapport {
+    grid-area: rapport;
+}
+#contact {
+    grid-area: contact;
+}
+
+#homepage:hover, #rapport:hover, #contact:hover {
     background-color: var(--color-li-hover);
 }
 
-nav ul li a {
+#homepage a, #rapport a, #contact a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,4 +85,14 @@ nav ul li a {
     align-items: center;
     font-size: 2rem;
     font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    background-color: gray;
+}
+
+footer {
+    grid-area: footer;
+    background-color: pink;
 }

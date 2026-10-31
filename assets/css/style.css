@@ -1,15 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Redaction:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
-    --color-page: black;
-    --color-header-text: white;
-    --color-header-bg: var(--color-page);
-    --color-nav-text: black;
-    --color-nav-bg: blue;
-    --color-li-bg: aqua;
-    --color-li-border: navy;
-    --color-li-hover: yellow;
-    --color-link-text: black;
+    --color-page: goldenrod;
+    --color-header-text: antiquewhite;
+    --color-fond-boutton: black;
+    --color-border: goldenrod;
+    --color-header-bg: black;
+    --color-nav-text: antiquewhite;
+    --color-nav-bg: maroon;
+    --color-li-bg: black;
+    --color-li-border: goldenrod;
+    --color-li-hover: goldenrod;
+    --color-link-text: antiquewhite;
     --taille: 70vh;
 }
 
@@ -37,11 +39,12 @@
 body {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 150px 5fr 150px;
     grid-template-areas: "header nav"
                          "main main"
                          "footer footer";
     background-color: var(--color-page);
+    height: 100%;
 }
 
 .header {
@@ -60,14 +63,13 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: aquamarine;
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--color-page);
+    background-color: var(--color-fond-boutton);
     list-style: none;
     width: 100%;
     height: 100%;
@@ -76,8 +78,8 @@ nav ul {
 nav ul li {
     width: 10rem;
     height: 2.5rem;
-    background-color: var(--color-page);
-    border: 2px solid gray;
+    background-color: var(--color-fond-boutton);
+    border: 2px solid var(--color-border);
     border-radius: 5px;
 }
 
@@ -91,15 +93,16 @@ nav ul li {
     grid-area: contact;
 }
 
+/* elle ne sert à rien nan ?
 #homepage:hover, #rapport:hover, #contact:hover {
     background-color: orange;
-}
+} */
 
 #homepage a, #rapport a, #contact a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--color-header-text);
     text-decoration: none;
     text-align: center;
     width: 100%;
@@ -110,18 +113,43 @@ nav ul li {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: var(--color-header-text);
     font-size: 2rem;
     font-weight: bold;
 }
 
 main {
     grid-area: main;
-    background-color: gray;
+}
+
+.texte {
+    padding: 50px;
+    font-size: 30px;
+    background-color: antiquewhite;
+}
+
+h2{
+    padding: 0 0 30px 0;
+}
+
+h3 {
+    padding: 22px 0;
 }
 
 footer {
     grid-area: footer;
-    background-color: pink;
+    background-color: black;
     text-align: center;
 }
+
+.personne {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-areas: "pdp1 pdp2 pdp3 pdp4"
+                         "pseudo1 pseudo2 pseudo3 pseudo4"
+                         "mail1 mail2 mail3 mail4";
+    background-color: var(--color-page);
+    height: 100%;
+}
+

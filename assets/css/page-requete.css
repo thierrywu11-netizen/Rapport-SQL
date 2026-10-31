@@ -93,7 +93,7 @@
 
 .tab-navigation {
     grid-area: nav;
-    background-color: darkgoldenrod;
+    background-color: #6D1A2A;
     color: white;
     display: grid;
     grid-template-columns: 1fr;
@@ -130,23 +130,24 @@
 
 .tab-pane {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr 2fr;
-    grid-template-areas: "consigne"
-                         "code"
-                         "resultat";
-    background-color: var(--color-nav-bg);
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 6fr;
+    grid-template-areas: "consigne consigne"
+                         "code     resultat";
+    background-color: antiquewhite;
     height: 100%;
 }
 
 .titre-requete {
     grid-area: consigne;
-    background-color: chartreuse;
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .code-sql {
     grid-area: code;
-    background-color: lightcoral;
     font-size: 1rem;
 }
 

@@ -31,7 +31,8 @@
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane" id="requete2">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec l’origine de ses produits : On veut comme indicateur le CA total généré à ce jour avec les fournisseurs de l’UE ?</h2>
+                        <h2 class="titre-requete">Dans une réflexion en lien avec l’origine de ses produits : On veut comme indicateur le CA total</h2>
+                        <h2 class="titre-requete">généré à ce jour avec les fournisseurs de l’UE ?</h2>
                         <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 SUM(
@@ -55,7 +56,8 @@
                         <img class="resultat" alt="requete2" src="assets/images/resultat-requete2.png">
                     </div>
                     <div class="tab-pane" id="requete3">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec la santé : On veut comme indicateur le chiffre d’affaires généré (montant total des ventes) annuel pour les catégories desserts ou boissons.</h2>
+                        <h2 class="titre-requete">Dans une réflexion en lien avec la santé : On veut comme indicateur le chiffre d’affaires généré</h2>
+                        <h2 class="titre-requete">(montant total des ventes) annuel pour les catégories desserts ou boissons.</h2>
                         <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 Year(Commande.DateCde) AS Annee,
@@ -85,7 +87,8 @@
                         <img class="resultat" alt="requete3" src="assets/images/resultat-requete3.png">
                     </div>
                     <div class="tab-pane" id="requete4">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec l’offre commerciale : Calcul de l’indicateur nombre de produits carnés non commandés actuellement ?</h2>
+                        <h2 class="titre-requete">Dans une réflexion en lien avec l’offre commerciale :</h2>
+                        <h2 class="titre-requete">Calcul de l’indicateur nombre de produits carnés non commandés actuellement ?</h2>
                         <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 COUNT(Pr.NomProd) AS TotalProduitCarnésHorsStock
@@ -102,7 +105,8 @@
                         <img class="resultat" alt="requete4" src="assets/images/resultat-requete4.png">
                     </div>
                     <div class="tab-pane" id="requete5">
-                        <h2 class="titre-requete">Dans une réflexion sur le partenariat client : A-t-on des clients pilotes d’un réseau partenaire ayant autant de commandes que les clients partenaires ?</h2>
+                        <h2 class="titre-requete">Dans une réflexion sur le partenariat client : A-t-on des clients pilotes d’un réseau partenaire</h2>
+                        <h2 class="titre-requete"> ayant autant de commandes que les clients partenaires ?</h2>
                         <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT P.CodeCli AS PiloteReseau,
                             FROM Clientele AS P

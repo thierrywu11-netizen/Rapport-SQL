@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;L0ki4&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/thierrywu11-netizen/Rapport-SQL&quot;,
+    &quot;accountId&quot;: &quot;80d08fbc-38e3-4bb5-a0dd-bcbe25be3911&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="3LQOhCr5yN6pfRpg0Wz5AQzxXph" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/P1/Documents/IUT/R1_02_Dev_Web/TPs/1/Rapport-SQL/assets/images/pfps",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
+    "nodejs_package_manager_path": "npm"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\P1\Documents\IUT\R1_02_Dev_Web\TPs\1\Rapport-SQL\assets\images\pfps" />
+      <recent name="C:\Users\P1\Documents\IUT\R1_02_Dev_Web\TPs\1\Rapport-SQL\assets\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\P1\Documents\IUT\R1_02_Dev_Web\TPs\1\Rapport-SQL\assets\images\resultats" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PS-262.10315.130" />
+        <option value="bundled-php-predefined-a98d8de5180a-9522f28f0b20-com.jetbrains.php.sharedIndexes-PS-262.10315.130" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="" />
+      <created>1793382942623</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1793382942623</updated>
+      <workItem from="1793382944611" duration="1001000" />
+      <workItem from="1793384000804" duration="764000" />
+      <workItem from="1793384774713" duration="7173000" />
+      <workItem from="1793444562582" duration="20772000" />
+    </task>
+    <task id="LOCAL-00001" summary="Changements temporaires (test autre structure de site)">
+      <option name="closed" value="true" />
+      <created>1793384819910</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1793384819911</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes">
+      <option name="closed" value="true" />
+      <created>1793391936086</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1793391936086</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changements temporaires (test autre structure de site)" />
+    <MESSAGE value="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes" />
+  </component>
+</project>

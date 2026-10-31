@@ -1,3 +1,18 @@
+:root {
+    --color-tab-nav-buttons-bg: rgb(164 55 58);
+    --color-tab-nav-buttons-text: white;
+    --color-tab-nav-buttons-border: rgb(62 2 3);
+
+    --color-img-resultat-border: black;
+}
+
+.tab {
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav page";
+}
+
 #tab-requete2, #tab-requete3, #tab-requete4, #tab-requete5 {
     display: none;
 }
@@ -14,9 +29,9 @@
      */
 }
 
-/* -- tab-requete2 --*/
+/* -- si tab-requete2 --*/
 .tab-buttons:has(#tab-requete2:checked) ~ .tab-content #requete2 {
-    display: block;
+    display: grid;
 }
 
 .tab-buttons:has(#tab-requete2:checked) ~ .tab-content #requete3 {
@@ -31,13 +46,13 @@
     display: none;
 }
 
-/* -- tab-requete3 --*/
+/* -- si tab-requete3 --*/
 .tab-buttons:has(#tab-requete3:checked) ~ .tab-content #requete2 {
     display: none;
 }
 
 .tab-buttons:has(#tab-requete3:checked) ~ .tab-content #requete3 {
-    display: block;
+    display: grid;
 }
 
 .tab-buttons:has(#tab-requete3:checked) ~ .tab-content #requete4 {
@@ -48,7 +63,7 @@
     display: none;
 }
 
-/* -- tab-requete4 --*/
+/* -- si tab-requete4 --*/
 .tab-buttons:has(#tab-requete4:checked) ~ .tab-content #requete2 {
     display: none;
 }
@@ -58,14 +73,14 @@
 }
 
 .tab-buttons:has(#tab-requete4:checked) ~ .tab-content #requete4 {
-    display: block;
+    display: grid;
 }
 
 .tab-buttons:has(#tab-requete4:checked) ~ .tab-content #requete5 {
     display: none;
 }
 
-/* -- tab-requete5 --*/
+/* -- si tab-requete5 --*/
 .tab-buttons:has(#tab-requete5:checked) ~ .tab-content #requete2 {
     display: none;
 }
@@ -79,22 +94,11 @@
 }
 
 .tab-buttons:has(#tab-requete5:checked) ~ .tab-content #requete5 {
-    display: block;
-}
-
-.tab {
     display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "nav page";
-    grid-gap: 3px;
-    margin-top: 3px;
 }
 
 .tab-navigation {
     grid-area: nav;
-    background-color: #6D1A2A;
-    color: white;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -102,14 +106,25 @@
                          "requete3"
                          "requete4"
                          "requete5";
+    color: var(--color-tab-nav-buttons-text);
+}
+
+#label-req2, #label-req3, #label-req4, #label-req5 {
+    display: flex;
     justify-content: center;
     align-items: center;
+    background-color: var(--color-tab-nav-buttons-bg);
+    font-size: 1.25rem;
     text-align: center;
-    height: var(--taille);
+    border: 5px solid var(--color-tab-nav-buttons-border);
+    border-top: 3px solid var(--color-tab-nav-buttons-border);
+    border-bottom: 3px solid var(--color-tab-nav-buttons-border);
+    border-left: none;
 }
 
 #label-req2 {
     grid-area: requete2;
+    border-top: none;
 }
 
 #label-req3 {
@@ -122,6 +137,7 @@
 
 #label-req5 {
     grid-area: requete5;
+    border-bottom: none;
 }
 
 .tab-content {
@@ -131,27 +147,61 @@
 .tab-pane {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 1fr 5fr;
     grid-template-areas: "consigne consigne"
-                         "code     resultat";
-    background-color: antiquewhite;
-    height: 100%;
+                         "requete-sql resultat"
+                         "code img-resultat";
+    justify-items: center;
+    align-items: center;
 }
 
 .titre-requete {
     grid-area: consigne;
-    font-size: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: underline;
+    padding: 30px 150px;
+}
+
+.indication {
+    font-size: 2rem;
+    font-weight: bold;
 }
 
 .code-sql {
     grid-area: code;
-    font-size: 1rem;
+    font-size: 1.25rem;
+    padding-bottom: 30px;
+
+    /* IA qui nous a conseillé d'utiliser ces propriétés sinon le bloc prend plus large que ce qu'il contien et on avait des débordements*/
+    width: fit-content;
+    justify-self: start;
 }
 
-.resultat {
-    grid-area: resultat;
-    background-color: lightslategray;
+.img-resultat {
+    grid-area: img-resultat;
+    width: 500px;
+    height: 200px;
+    padding-bottom: 30px;
+}
+
+#img-res-req2 {
+    width: 375px;
+    height: 150px;
+}
+#img-res-req3 {
+    width: 650px;
+    height: 250px;
+}
+#img-res-req4 {
+    width: 400px;
+    height: 100px;
+}
+#img-res-req5 {
+    width: 375px;
+    height: 150px;
 }

@@ -2,13 +2,16 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>?? - Rapport</title>
-        <link rel="stylesheet" href="assets/css/style.css">
+        <title>[Placeholder] - Rapport</title>
+        <link rel="stylesheet" href="assets/css/style-site.css">
         <link rel="stylesheet" href="assets/css/page-requete.css">
     </head>
     <body>
-        <header class="header">[Placeholder]</header>
-        <nav class="container">
+        <header>
+            <p class="nom-site">[Placeholder]</p>
+            <p class="nom-precision">Oui, c'est bien le nom du site</p>
+        </header>
+        <nav>
             <ul>
                 <li id="homepage"><a href="Accueil.html">Accueil</a></li>
                 <li id="rapport" class="dedans">Rapport</li>
@@ -24,16 +27,16 @@
                     <input type="radio" name="tabs" id="tab-requete5">
                 </div>
                 <div class="tab-navigation">
-                    <label for="tab-requete2" id="label-req2" class="tab-label">REQUETE 2</label>
-                    <label for="tab-requete3" id="label-req3" class="tab-label">REQUETE 3</label>
-                    <label for="tab-requete4" id="label-req4" class="tab-label">REQUETE 4</label>
-                    <label for="tab-requete5" id="label-req5" class="tab-label">REQUETE 5</label>
+                    <label for="tab-requete2" id="label-req2" class="tab-label">REQUÊTE N°2</label>
+                    <label for="tab-requete3" id="label-req3" class="tab-label">REQUÊTE N°3</label>
+                    <label for="tab-requete4" id="label-req4" class="tab-label">REQUÊTE N°4</label>
+                    <label for="tab-requete5" id="label-req5" class="tab-label">REQUÊTE N°5</label>
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane" id="requete2">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec l’origine de ses produits : On veut comme indicateur le CA total</h2>
-                        <h2 class="titre-requete">généré à ce jour avec les fournisseurs de l’UE ?</h2>
-                        <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
+                        <h2 class="titre-requete">Le chiffre d'affaires total généré à ce jour avec les fournisseurs de l’UE</h2>
+                        <p class="indication">[ Requête SQL ]</p>
+                        <pre class="code-sql"> <!-- on a demandé à l'IA comment formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 SUM(
                                     DT.Quantité * (Pr.CoutAchat * (1 - DT.[Remise (%)])) - Co.Port
@@ -43,7 +46,8 @@
                                     (
                                         (
                                             Commande AS Co
-                                            INNER JOIN DetailCommande AS DT ON Co.[N° commande] = DT.[N° commande]
+                                            INNER JOIN DetailCommande AS DT
+                                                ON Co.[N° commande] = DT.[N° commande]
                                         )
                                         INNER JOIN Produit AS Pr ON DT.[Réf produit] = Pr.RefProd
                                     )
@@ -52,24 +56,27 @@
                                 INNER JOIN Pays AS P ON F.NoPays = P.NoPays
                             WHERE
                                 P.UE = "Membre";
-                        </code></pre>
-                        <img class="resultat" alt="requete2" src="assets/images/resultat-requete2.png">
+                        </pre>
+                        <p class="indication">[ Résultat ]</p>
+                        <img id="img-res-req2" class="img-resultat" alt="resultat de la requete numéro 2" src="assets/images/resultat-requetes/requete2.png">
                     </div>
                     <div class="tab-pane" id="requete3">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec la santé : On veut comme indicateur le chiffre d’affaires généré</h2>
-                        <h2 class="titre-requete">(montant total des ventes) annuel pour les catégories desserts ou boissons.</h2>
-                        <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
+                        <h2 class="titre-requete">Le chiffre d’affaires généré annuellement pour les catégories desserts ou boissons</h2>
+                        <p class="indication">[ Requête SQL ]</p>
+                        <pre class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 Year(Commande.DateCde) AS Annee,
                                 Categorie.NomCateg,
                                 Sum(
-                                    DetailCommande.Quantité * Produit.CoutAchat * Categorie.CoefMarge * (1 - DetailCommande.[Remise (%)])
+                                    DetailCommande.Quantité * Produit.CoutAchat * Categorie.CoefMarge *
+                                    (1 - DetailCommande.[Remise (%)])
                                 ) AS CA_Annuel
                             FROM
                                 (
                                     (
                                         Commande
-                                        INNER JOIN DetailCommande ON Commande.[N° commande] = DetailCommande.[N° commande]
+                                        INNER JOIN DetailCommande
+                                            ON Commande.[N° commande] = DetailCommande.[N° commande]
                                     )
                                     INNER JOIN Produit ON DetailCommande.[Réf produit] = Produit.RefProd
                                 )
@@ -83,13 +90,14 @@
                             ORDER BY
                                 Year(Commande.DateCde),
                                 Categorie.NomCateg;
-                        </code></pre>
-                        <img class="resultat" alt="requete3" src="assets/images/resultat-requete3.png">
+                        </pre>
+                        <p class="indication">[ Résultat ]</p>
+                        <img id="img-res-req3" class="img-resultat" alt="resultat de la requete numéro 3" src="assets/images/resultat-requetes/requete3.png">
                     </div>
                     <div class="tab-pane" id="requete4">
-                        <h2 class="titre-requete">Dans une réflexion en lien avec l’offre commerciale :</h2>
-                        <h2 class="titre-requete">Calcul de l’indicateur nombre de produits carnés non commandés actuellement ?</h2>
-                        <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
+                        <h2 class="titre-requete">Le nombre de produits carnés non commandés actuellement</h2>
+                        <p class="indication">[ Requête SQL ]</p>
+                        <pre class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
                             SELECT
                                 COUNT(Pr.NomProd) AS TotalProduitCarnésHorsStock
                             FROM
@@ -97,38 +105,55 @@
                                 INNER JOIN Categorie AS C ON Pr.CodeCateg = C.CodeCateg
                             WHERE
                                 C.NomCateg = "Viandes"
-                                AND (
-                                    Pr.UnitStock = 0
-                                    OR Pr.UnitStock IS NULL
+                                AND Pr.RefProd NOT IN (
+                                    SELECT
+                                        DT.[Réf produit]
+                                    FROM
+                                        DetailCommande AS DT
                                 );
-                        </code></pre>
-                        <img class="resultat" alt="requete4" src="assets/images/resultat-requete4.png">
+                        </pre>
+                        <p class="indication">[ Résultat ]</p>
+                        <img id="img-res-req4" class="img-resultat" alt="resultat de la requete numéro 4" src="assets/images/resultat-requetes/requete4.png">
                     </div>
                     <div class="tab-pane" id="requete5">
-                        <h2 class="titre-requete">Dans une réflexion sur le partenariat client : A-t-on des clients pilotes d’un réseau partenaire</h2>
-                        <h2 class="titre-requete"> ayant autant de commandes que les clients partenaires ?</h2>
-                        <pre><code class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
-                            SELECT P.CodeCli AS PiloteReseau,
-                            FROM Clientele AS P
-                            INNER JOIN Commande AS Co ON P.CodeCli = Co.CodeCli
+                        <h2 class="titre-requete">A-t-on des clients pilotes d’un réseau partenaire ayant autant de commandes que les clients partenaires ?</h2>
+                        <p class="indication">[ Requête SQL ]</p>
+                        <pre class="code-sql"> <!-- on a demandé à l'IA pour formatter le code correctement sur plusieurs ligne d'où la balise <pre> -->
+                            SELECT
+                                P.CodeCli AS PiloteReseau
+                            FROM
+                                Clientele AS P
+                                INNER JOIN Commande AS Co ON P.CodeCli = Co.CodeCli
                             WHERE P.CodeCli IN (
-                                SELECT CodeCliPart
-                                FROM Clientele
-                                WHERE CodeCliPart IS NOT NULL
-                            )
-                            GROUP BY P.CodeCli
-                            HAVING COUNT(*)  = (
-                                    SELECT COUNT(*)
-                                    FROM Clientele AS CLTL INNER JOIN Commande AS Co2 ON CLTL.CodeCli = Co2.CodeCli
-                                    WHERE CLTL.CodeCliPart = P.CodeCl
-                                    GROUP BY CLTL.CodeCliPart;
-                            );
-                        </code></pre>
-                        <img class="resultat" alt="requete5" src="assets/images/resultat-requete5.png">
+                                    SELECT
+                                        CodeCliPart
+                                    FROM
+                                        Clientele
+                                    WHERE
+                                        CodeCliPart IS NOT NULL
+                                )
+                            GROUP
+                                BY P.CodeCli
+                            HAVING
+                                COUNT(*) = (
+                                    SELECT
+                                        COUNT(*)
+                                    FROM
+                                        Clientele AS CLTL
+                                        INNER JOIN Commande AS Co2
+                                            ON CLTL.CodeCli = Co2.CodeCli
+                                    WHERE
+                                        CLTL.CodeCliPart = P.CodeCli
+                                    GROUP BY
+                                        CLTL.CodeCliPart;
+                                );
+                        </pre>
+                        <p class="indication">[ Résultat ]</p>
+                        <img id="img-res-req5" class="img-resultat" alt="resultat de la requete numéro 5" src="assets/images/resultat-requetes/requete5.png">
                     </div>
                 </div>
             </div>
         </main>
-        <footer>@2026 ??</footer>
+        <footer>© Copyright 2026, Eric Cui, Samuele Lin, Thierry Wu, Ethan Ladjyn. All rights reserved.</footer>
     </body>
 </html>

@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Redaction:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+    --color-page: black;
+    --color-default-text: antiquewhite;
+
+    --color-button-border: goldenrod;
+    --color-button-text: var(--color-default-text);
+
+    --color-main-bg: var(--color-default-text);
+    --color-main-border: darkgoldenrod;
+
+    --color-footer-bg: var(--color-page);
+    --color-footer-text: var(--color-default-text);
+}
+
+* {
+    font-family: "Redaction", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 150px 5fr 75px;
+    grid-template-areas: "header nav"
+                         "main main"
+                         "footer footer";
+    background-color: var(--color-page);
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-default-text);
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.nom-site {
+    font-weight: bold;
+}
+
+.nom-precision {
+    font-size: 1.125rem;
+}
+
+nav {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 100%;
+}
+
+nav ul li {
+    border: 2px solid var(--color-button-border);
+    border-radius: 5px;
+    width: 10rem;
+    height: 2.5rem;
+}
+
+#homepage {
+    grid-area: homepage;
+}
+#rapport {
+    grid-area: rapport;
+}
+#contact {
+    grid-area: contact;
+}
+
+#homepage a, #rapport a, #contact a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-button-text);
+    font-size: 1.25rem;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.dedans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-button-text);
+    text-decoration: underline;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    grid-area: main;
+    background-color: var(--color-main-bg);
+    border-top: 7px solid var(--color-main-border);
+    border-bottom: 7px solid var(--color-main-border);
+}
+
+footer {
+    grid-area: footer;
+    background-color: var(--color-footer-bg);
+    color: var(--color-footer-text);
+    text-align: center;
+    padding-top: 25px;
+}

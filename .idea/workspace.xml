@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Rapport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/page-accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-accueil.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/page-contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-contact.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/page-requete.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-requete.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/style-site.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style-site.css" afterDir="false" />
-    </list>
+    <list default="true" id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -96,7 +87,7 @@
       <workItem from="1793444562582" duration="20772000" />
       <workItem from="1793466300696" duration="5298000" />
       <workItem from="1793471636215" duration="20000" />
-      <workItem from="1793515702696" duration="6460000" />
+      <workItem from="1793515702696" duration="6633000" />
     </task>
     <task id="LOCAL-00001" summary="Changements temporaires (test autre structure de site)">
       <option name="closed" value="true" />

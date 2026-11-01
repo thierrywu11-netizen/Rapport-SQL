@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes" />
+    <list default="true" id="2f63a1af-81c8-4e55-8cd3-3096e8ac49a1" name="Changes" comment="Grid pour l'affichage du rapport + consignes, code SQL et résultat des requêtes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Accueil.html" beforeDir="false" afterPath="$PROJECT_DIR$/Accueil.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/Contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Rapport.html" beforeDir="false" afterPath="$PROJECT_DIR$/Rapport.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/page-accueil.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-accueil.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/page-contact.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-contact.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/page-requete.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/page-requete.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/style-site.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/style-site.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,20 +52,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/P1/Documents/IUT/R1_02_Dev_Web/TPs/1/Rapport-SQL/assets/images/pfps",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.jshint": "true",
-    "node.js.selected.package.jshint": "",
-    "nodejs_package_manager_path": "npm"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/P1/Documents/IUT/R1_02_Dev_Web/TPs/1/Rapport-SQL/assets/images/pfps&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.jshint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.jshint&quot;: &quot;&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\P1\Documents\IUT\R1_02_Dev_Web\TPs\1\Rapport-SQL\assets\images\pfps" />
@@ -69,8 +78,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PS-262.10315.130" />
-        <option value="bundled-php-predefined-a98d8de5180a-9522f28f0b20-com.jetbrains.php.sharedIndexes-PS-262.10315.130" />
+        <option value="bundled-js-predefined-d6986cc7102b-4abd2a77f808-JavaScript-PS-262.10968.76" />
+        <option value="bundled-php-predefined-a98d8de5180a-9522f28f0b20-com.jetbrains.php.sharedIndexes-PS-262.10968.76" />
       </set>
     </attachedChunks>
   </component>
@@ -85,6 +94,9 @@
       <workItem from="1793384000804" duration="764000" />
       <workItem from="1793384774713" duration="7173000" />
       <workItem from="1793444562582" duration="20772000" />
+      <workItem from="1793466300696" duration="5298000" />
+      <workItem from="1793471636215" duration="20000" />
+      <workItem from="1793515702696" duration="6460000" />
     </task>
     <task id="LOCAL-00001" summary="Changements temporaires (test autre structure de site)">
       <option name="closed" value="true" />

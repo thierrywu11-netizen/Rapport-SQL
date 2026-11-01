@@ -97,6 +97,15 @@
     display: grid;
 }
 
+/* SI SELECTIONNE ALORS CHANGE DE COULEUR*/
+.tab-buttons:has(#tab-requete2:checked) ~ .tab-navigation label[for="tab-requete2"],
+.tab-buttons:has(#tab-requete3:checked) ~ .tab-navigation label[for="tab-requete3"],
+.tab-buttons:has(#tab-requete4:checked) ~ .tab-navigation label[for="tab-requete4"],
+.tab-buttons:has(#tab-requete5:checked) ~ .tab-navigation label[for="tab-requete5"] {
+    background-color: white;
+    color: black;
+}
+
 .tab-navigation {
     grid-area: nav;
     display: grid;
@@ -168,9 +177,9 @@
 }
 
 .indication {
-    font-size: 2rem;
-    font-weight: bold;
-}
+        font-size: 2rem;
+        font-weight: bold;
+    }
 
 .code-sql {
     grid-area: code;
@@ -204,4 +213,127 @@
 #img-res-req5 {
     width: 375px;
     height: 150px;
+}
+@media screen and (max-width: 768px) {
+    body{
+        display: block;
+    }
+    .tab {
+        display: flex;
+        flex-direction: column;
+    }
+    .tab-buttons:has(#tab-requete2:checked) ~ .tab-content #requete2,
+    .tab-buttons:has(#tab-requete3:checked) ~ .tab-content #requete3,
+    .tab-buttons:has(#tab-requete4:checked) ~ .tab-content #requete4,
+    .tab-buttons:has(#tab-requete5:checked) ~ .tab-content #requete5 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tab-navigation {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        color: var(--color-tab-nav-buttons-text);
+    }
+    #label-req2, #label-req3, #label-req4, #label-req5 {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        border: 5px solid var(--color-tab-nav-buttons-border);
+        border-top: 5px solid var(--color-tab-nav-buttons-border);
+        border-bottom: 5px solid var(--color-tab-nav-buttons-border);
+    }
+
+    .tab-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+    }
+    .tab-pane {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        text-align: center;
+    }
+    .titre-requete {
+        display: flex;
+        font-size: 1.5rem;
+        padding: 20px 10px;
+        width: 100%;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: underline;
+    }
+    .code-sql {
+        width: fit-content;
+
+        font-size: 1rem;
+        padding-bottom: 30px;
+        /* IA qui nous a conseillé d'utiliser ces propriétés sinon le bloc prend plus large que ce qu'il contien et on avait des débordements*/
+        /*width: fit-content;*/
+        text-align: left;
+
+        overflow-x: auto; /* pour retour a la ligne si ca deborde*/
+        white-space: pre-wrap;
+    }
+    .img-resultat {
+        align-self: center;
+        grid-area: img-resultat;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+    }
+    #img-res-req2,
+    #img-res-req3,
+    #img-res-req4,
+    #img-res-req5 {
+        max-width: 100%;
+        height: auto;
+        padding: 10px;
+        object-fit: contain;
+    }
+
+    header {
+        position: relative;
+    }
+
+    nav {
+        display: none;
+    }
+
+    #nav-icon {
+        display: flex; /* Visible sur mobile */
+        color: white;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 50px;
+        cursor: pointer;
+    }
+
+    #nav-checkbox:checked ~ nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: var(--color-page);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        z-index: 100;
+    }
+
+    #nav-checkbox:checked ~ nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 20px;
+    }
+
+    #nav-checkbox:checked ~ nav ul li {
+        width: 80%;
+    }
 }

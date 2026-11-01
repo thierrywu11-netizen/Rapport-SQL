@@ -102,3 +102,18 @@
 #mail4 {
     grid-area: mail4;
 }
+
+@media screen and (max-width: 768px) {
+    .personnes {
+        /* On transforme la grille de profils en une simple colonne verticale */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    .plateforme, .adresse, .void{
+        display: none;
+    }
+
+}
